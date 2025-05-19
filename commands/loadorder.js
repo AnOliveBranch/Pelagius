@@ -86,7 +86,7 @@ module.exports = {
 		} else {
 			const buf = Buffer.from(result, 'utf8');
 			const attachment = new AttachmentBuilder(buf, { name: 'differences.txt' });
-			await interaction.editReply({ content: `${interaction.user} Here\'s what you need to fix:`, files: [attachment] });
+			await interaction.editReply({ content: `${interaction.user} Here's what you need to fix:`, files: [attachment] });
 		}
 	},
 };
