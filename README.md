@@ -3,15 +3,19 @@
 Pelagius is a Discord bot that was originally written for Evertiro's
 LOTD Plus Skyrim modding guide. This later expanded to include
 [Lexy's Legacy of the Dragonborn guide] as well as [The Phoenix Flavour].
-Originally, the wasn't actually a bot at all, just me running a python
-script manually to compare my own loadorder to that of other users when
-they uploaded it. Naturally, the problem with that is that I have to be
-there all the time to run my script. I then decided to start developing
+Originally, it wasn't actually a bot at all, just [Olivia] running a python
+script manually to compare her own loadorder to that of other users when
+they uploaded it. Naturally, the problem with that is that she had to be
+there all the time to run the script. She then decided to start developing
 a standalone Discord bot written in Discord.py to accomplish the same
-thing, but automatically. I later switched over to Discord.js, as well
+thing, but automatically. She later switched over to Discord.js, as well
 as implemented a few other features, such as being able to ignore certain
 plugins in the list. However, that's the past. Let's talk about now and
 the future.
+
+> *Note:* Pelagius is predominantly the work of [Olivia], but the current
+> iteration is maintained by Evertiro. Please direct questions or issues
+> to Evertiro on [Lexy's Discord].
 
 ## What does it do?
 
@@ -106,6 +110,8 @@ can be run in.
 
 [Lexy's Legacy of the Dragonborn guide]: https://lexyslotd.com
 [The Phoenix Flavour]: https://thephoenixflavour.com
+[Olivia]: https://github.com/AnOliveBranch/Pelagius/
+[Lexy's Discord]: https://discord.gg/xj7JcZ7
 [loadorder.txt]: example/loadorder.txt
 [skips file]: example/skips.txt
 [reasons file]: example/reasons.json
