@@ -2,15 +2,15 @@
 	"name": "pelagius",
 	"version": "1.0.0",
 	"description": "Discord loadorder bot for Skyrim modding guides",
-	"homepage": "https://github.com/AnOliveBranch/Pelagius",
+	"homepage": "https://github.com/evertiro/Pelagius",
 	"bugs": {
-		"url": "https://github.com/AnOliveBranch/Pelagius/issues"
+		"url": "https://github.com/evertiro/Pelagius/issues"
 	},
 	"license": "MIT",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/AnOliveBranch/Pelagius"
+		"url": "https://github.com/evertiro/Pelagius"
 	},
 	"scripts": {
 		"start": "NODE_VERSION=22 node index.js",
