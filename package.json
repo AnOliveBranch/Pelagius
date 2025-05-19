@@ -1,13 +1,13 @@
 {
 	"name": "pelagius",
 	"version": "1.0.0",
-  	"description": "Discord loadorder bot for Skyrim modding guides",
-  	"homepage": "https://github.com/AnOliveBranch/Pelagius",
+	"description": "Discord loadorder bot for Skyrim modding guides",
+	"homepage": "https://github.com/AnOliveBranch/Pelagius",
 	"bugs": {
-    	"url": "https://github.com/AnOliveBranch/Pelagius/issues"
-  	},
-  	"license": "MIT",
-  	"main": "index.js",
+		"url": "https://github.com/AnOliveBranch/Pelagius/issues"
+	},
+	"license": "MIT",
+	"main": "index.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/AnOliveBranch/Pelagius"
@@ -18,7 +18,8 @@
 		"dev": "pnpm install && pnpm dev:start",
 		"lint:js": "eslint .",
 		"lint:md": "markdownlint-cli2",
-		"lint": "pnpm lint:js; pnpm lint:md"
+		"lint": "pnpm lint:js; pnpm lint:md",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"discord.js": "^14.19.1"
@@ -28,6 +29,7 @@
 		"@eslint/js": "^9.25.1",
 		"eslint": "^9.25.1",
 		"globals": "^16.0.0",
+		"husky": "^9.1.7",
 		"markdownlint": "^0.37.4",
 		"markdownlint-cli2": "^0.17.2"
 	},
