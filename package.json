@@ -15,10 +15,10 @@
 	"scripts": {
 		"start": "NODE_VERSION=22 node index.js",
 		"dev:start": "NODE_VERSION=22 node --trace-warnings index.js",
-		"dev": "pnpm install && pnpm dev:start",
+		"dev": "yarn install && yarn dev:start",
 		"lint:js": "eslint .",
 		"lint:md": "markdownlint-cli2",
-		"lint": "pnpm lint:js; pnpm lint:md",
+		"lint": "yarn lint:js; yarn lint:md",
 		"prepare": "husky"
 	},
 	"dependencies": {

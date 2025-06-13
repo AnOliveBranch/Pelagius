@@ -65,7 +65,7 @@ systemd/user directory, run `systemctl --user daemon-reload` followed by
 
 Be sure to update the WorkingDirectory and ExecStart lines with the appropriate
 paths! If you are using NVM, the ExecStart line should be run through `nvm-exec`
-like so: `ExecStart=/path/to/.nvm/nvm-exec pnpm start`
+like so: `ExecStart=/path/to/.nvm/nvm-exec yarn start`
 
 ## Complete command list
 

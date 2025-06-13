@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 Restart=always
 WorkingDirectory=/path/to/bot
-ExecStart=pnpm start
+ExecStart=yarn start
 Environment=NODE_VERSION=22
 Environment=NODE_ENV=production
 
