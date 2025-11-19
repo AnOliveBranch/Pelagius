@@ -1,0 +1,9 @@
+{
+    "config": {
+      "default": true,
+      "MD007": false,
+      "MD030": false
+    },
+    "globs": ["**/*.md"],
+    "ignores": ["node_modules"]
+}

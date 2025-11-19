@@ -13,7 +13,7 @@ module.exports = {
 		const logChannel = await client.channels.fetch(logChannelId);
 		const logger = new Logger(logChannel);
 		logger.logMessage('Bot is ready');
-	}
+	},
 };
 
 async function startup(client) {

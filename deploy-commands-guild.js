@@ -15,7 +15,7 @@ for (const file of commandFiles) {
 		commands.push(command.data.toJSON());
 	} else {
 		console.log(
-			`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`
+			`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`,
 		);
 	}
 }
@@ -30,7 +30,7 @@ const rest = new REST().setToken(token);
 
 		// The put method is used to fully refresh all commands in the guild with the current set
 		const data = await rest.put(Routes.applicationGuildCommands(clientId, guildId), {
-			body: commands
+			body: commands,
 		});
 
 		console.log(`Successfully reloaded ${data.length} application (/) commands.`);

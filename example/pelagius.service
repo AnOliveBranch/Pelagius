@@ -1,0 +1,14 @@
+[Unit]
+Description=Pelagius
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/path/to/bot
+ExecStart=yarn start
+Environment=NODE_VERSION=22
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

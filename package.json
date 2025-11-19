@@ -1,8 +1,39 @@
 {
+	"name": "pelagius",
+	"version": "1.0.0",
+	"description": "Discord loadorder bot for Skyrim modding guides",
+	"homepage": "https://github.com/evertiro/Pelagius",
+	"bugs": {
+		"url": "https://github.com/evertiro/Pelagius/issues"
+	},
+	"license": "MIT",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/evertiro/Pelagius"
+	},
+	"scripts": {
+		"start": "NODE_VERSION=22 node index.js",
+		"dev:start": "NODE_VERSION=22 node --trace-warnings index.js",
+		"dev": "yarn install && yarn dev:start",
+		"lint:js": "eslint .",
+		"lint:md": "markdownlint-cli2",
+		"lint": "yarn lint:js; yarn lint:md",
+		"prepare": "husky"
+	},
 	"dependencies": {
-		"discord.js": "^14.14.1"
+		"discord.js": "^14.19.1"
 	},
 	"devDependencies": {
-		"eslint": "^8.57.0"
+		"@eslint/eslintrc": "^3.3.1",
+		"@eslint/js": "^9.25.1",
+		"eslint": "^9.25.1",
+		"globals": "^16.0.0",
+		"husky": "^9.1.7",
+		"markdownlint": "^0.37.4",
+		"markdownlint-cli2": "^0.17.2"
+	},
+	"engines": {
+		"node": "^22.15.0"
 	}
 }

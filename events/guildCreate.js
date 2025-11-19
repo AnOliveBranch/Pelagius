@@ -15,7 +15,7 @@ module.exports = {
 		await fileManager.createGuildFiles(guild.id);
 
 		logger.logMessage(`Bot joined a new guild: \n\`\`\`${guildDetails}\`\`\``);
-	}
+	},
 };
 
 async function getGuildDetails(guild) {

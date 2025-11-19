@@ -11,12 +11,12 @@ module.exports = {
 		.setDescription('Command to validate your loadorder')
 		.setDMPermission(false)
 		.addAttachmentOption((option) =>
-			option.setName('file').setDescription('Your loadorder.txt file to compare').setRequired(true)
+			option.setName('file').setDescription('Your loadorder.txt file to compare').setRequired(true),
 		)
 		.addStringOption((option) =>
 			option
 				.setName('guide')
-				.setDescription('Guide to validate loadorder against (use `/guides` to list guides)')
+				.setDescription('Guide to validate loadorder against (use `/guides` to list guides)'),
 		),
 	async execute(interaction) {
 		await interaction.deferReply();
@@ -33,7 +33,7 @@ module.exports = {
 
 		if (!guides.includes(guide)) {
 			await interaction.editReply({
-				content: `The guide \`${guide}\` does not exist in this server`
+				content: `The guide \`${guide}\` does not exist in this server`,
 			});
 			return;
 		}
@@ -43,14 +43,14 @@ module.exports = {
 
 		if (masterLoadorder.length === 1 && masterLoadorder[0] === '') {
 			await interaction.editReply({
-				content: `The loadorder file for \`${guide}\` has not been set`
+				content: `The loadorder file for \`${guide}\` has not been set`,
 			});
 			return;
 		}
 
 		if (!enabled) {
 			await interaction.editReply({
-				content: `Loadorder validation is disabled for guide \`${guide}\``
+				content: `Loadorder validation is disabled for guide \`${guide}\``,
 			});
 			return;
 		}
@@ -59,14 +59,14 @@ module.exports = {
 
 		if (userLoadorderFile.name !== 'loadorder.txt') {
 			await interaction.editReply({
-				content: 'The file must be named loadorder.txt'
+				content: 'The file must be named loadorder.txt',
 			});
 			return;
 		}
 
 		if (userLoadorderFile.contentType !== 'text/plain; charset=utf-8') {
 			await interaction.editReply({
-				content: 'The file must be the right filetype'
+				content: 'The file must be the right filetype',
 			});
 			return;
 		}
@@ -82,13 +82,13 @@ module.exports = {
 		const result = compare(masterLoadorder, userLoadorder, reasons, skips);
 
 		if (result === '') {
-			await interaction.editReply('Your loadorder has no issues!');
+			await interaction.editReply(`${interaction.user} Your loadorder has no issues!`);
 		} else {
 			const buf = Buffer.from(result, 'utf8');
 			const attachment = new AttachmentBuilder(buf, { name: 'differences.txt' });
-			await interaction.editReply({ content: "Here's what you need to fix", files: [attachment] });
+			await interaction.editReply({ content: `${interaction.user} Here's what you need to fix:`, files: [attachment] });
 		}
-	}
+	},
 };
 
 function compare(master, user, reasons, skips) {
@@ -104,7 +104,7 @@ function compare(master, user, reasons, skips) {
 			if (!skips.includes(line)) {
 				temp += line;
 
-				if (reasons.hasOwnProperty(line)) {
+				if (Object.prototype.hasOwnProperty.call(reasons, line)) {
 					temp += reasons[line];
 				}
 
@@ -128,7 +128,7 @@ function compare(master, user, reasons, skips) {
 			if (!skips.includes(line)) {
 				temp += line;
 
-				if (reasons.hasOwnProperty(line)) {
+				if (Object.prototype.hasOwnProperty.call(reasons, line)) {
 					temp += reasons[line];
 				}
 

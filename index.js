@@ -7,8 +7,8 @@ const client = new Client({
 	intents: [
 		GatewayIntentBits.Guilds,
 		GatewayIntentBits.GuildMessages,
-		GatewayIntentBits.MessageContent
-	]
+		GatewayIntentBits.MessageContent,
+	],
 });
 
 client.commands = new Collection();
@@ -22,7 +22,7 @@ for (const file of commandFiles) {
 		client.commands.set(command.data.name, command);
 	} else {
 		console.log(
-			`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`
+			`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`,
 		);
 	}
 }

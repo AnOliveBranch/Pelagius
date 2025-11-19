@@ -2,8 +2,6 @@ const fsPromises = require('node:fs/promises');
 const path = require('node:path');
 
 class FileManager {
-	constructor() {}
-
 	async createDataFolder() {
 		const dataFolder = path.join(__dirname, '..', 'data');
 		try {
@@ -121,17 +119,17 @@ class FileManager {
 }
 
 module.exports = {
-	FileManager
+	FileManager,
 };
 
 function getDefaultSettings() {
 	const settings = {
 		guides: {
 			default: {
-				enabled: true
-			}
+				enabled: true,
+			},
 		},
-		defaultGuide: 'default'
+		defaultGuide: 'default',
 	};
 
 	return settings;

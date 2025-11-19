@@ -18,8 +18,8 @@ class RemoteManager {
 				});
 
 				response.on('error', (error) => {
-					logger.logMessage(
-						`There was an error reading remote URL \`${url}\`\n\`\`\`\n${error}\n\`\`\``
+					this._logger.logMessage(
+						`There was an error reading remote URL \`${url}\`\n\`\`\`\n${error}\n\`\`\``,
 					);
 					reject(error);
 				});
@@ -29,5 +29,5 @@ class RemoteManager {
 }
 
 module.exports = {
-	RemoteManager
+	RemoteManager,
 };

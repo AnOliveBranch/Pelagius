@@ -77,5 +77,5 @@ class GuildManager {
 }
 
 module.exports = {
-	GuildManager
+	GuildManager,
 };
