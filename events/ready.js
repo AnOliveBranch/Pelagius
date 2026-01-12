@@ -1,7 +1,7 @@
 const { Events } = require('discord.js');
 const { Logger } = require('../util/Logger.js');
 const { FileManager } = require('../util/FileManager.js');
-const { logChannelId } = require('../config.json');
+const { logChannelId } = require('../config.js');
 
 module.exports = {
 	name: Events.ClientReady,
@@ -13,7 +13,7 @@ module.exports = {
 		const logChannel = await client.channels.fetch(logChannelId);
 		const logger = new Logger(logChannel);
 		logger.logMessage('Bot is ready');
-	},
+	}
 };
 
 async function startup(client) {

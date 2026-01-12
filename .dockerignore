@@ -1,0 +1,14 @@
+# Node artifacts
+node_modules
+npm-debug.log
+yarn-error.log
+
+# VCS
+.git
+.gitignore
+
+# Local runtime data (mounted at /home/node/app/data)
+data/
+
+# Env files (used by compose, not baked into the image)
+.env
